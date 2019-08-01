@@ -1,0 +1,25 @@
+<template>
+	<div class="template">
+		
+		<div class="root">
+			<div class="window">
+				<div class="imgContainer" >
+					<div class="imgCard" repeat.for="img of imgArray">
+						<div class="imgCardItem" >
+							<div class="imgCardItemDiv" style="background-image:url(${img.link})"></div>
+							<!-- <img src=${img.link} class="imgCardItemImage"> -->
+							<div class="imgCardItemText">${$index} - ${img.link}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="prevArrow" click.delegate="onClickArrow(-1)">&#10094;</a>
+			<a class="nextArrow" click.delegate="onClickArrow(1)">&#10095;</a>
+			<div class="desc">
+				<div class="toggleAlbumButton" click.delegate="toggleAlbum()">Toggle Album</div>
+				<div>Album: ${album}</div>
+				<div>Total number of images: ${imgArray.length}</div>
+			</div>
+		</div>
+	</div>
+</template>

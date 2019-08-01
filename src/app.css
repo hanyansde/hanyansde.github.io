@@ -1,0 +1,125 @@
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.template {
+	width: 100%;
+	margin: auto;
+	min-width: 400px;
+}
+.root {
+	width: calc(320px * 4 + 82px);
+	position: relative;
+	min-width: 400px;
+	margin: auto;
+	height: 402px
+}
+.window {
+	width: calc(320px * 4);
+	overflow: hidden;
+	position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: auto;
+    height: 402px
+}
+.imgContainer {
+	/*display: flex;*/
+	transform: translate(0px);
+	transition: transform 1s ease-in-out;
+	/*width: calc(320px * 11);*/
+	position: relative;
+	opacity: 1;
+	height: 402px
+}
+.imgCard {
+	padding: 50px 10px;
+	width: 320px;
+	height: 400px;
+	/*margin: 10px;*/
+	display: block;
+	float: left;
+}
+.imgCardItem {
+	width: 300px;
+	height: 300px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	/*margin: 10px;*/
+	display: block;
+}
+.imgCardItemImage {
+	width: 298px;
+    height: 200px;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    background-size:cover;
+}
+.imgCardItemDiv{
+  width: 298px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.imgCardItemText {
+	text-align: center;
+	padding: 35px 5px;
+}
+.prevArrow, .nextArrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 10px 0px 0px 10px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.nextArrow {
+  right: 0;
+  border-radius: 0px 10px 10px 0;
+}
+.prevArrow:hover, .nextArrow:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+.desc {
+	margin: 5px 45px;
+}
+.toggleAlbumButton {
+	width: 120px;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1600px) {
+	.root {
+		width: calc(320px * 3 + 82px);
+	}
+	.window {
+		width: calc(320px * 3);
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.root {
+		width: calc(320px * 2 + 82px);
+	}
+	.window {
+		width: calc(320px * 2);
+	}
+}
+@media only screen and (max-width: 800px) {
+	.root {
+		width: calc(320px * 1 + 82px);
+	}
+	.window {
+		width: calc(320px * 1);
+	}
+}
