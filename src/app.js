@@ -6,7 +6,7 @@ export class App {
 		//this.imgIndex = 0;
 		this.numPerPage = 1;
 		this.curOffset = 0;
-		this.imgWidth = 320;
+		this.imgWidth = 220;
 		this.ttlOffset = 1;
 		this.album = '8PH6b';// 8PH6b has 11 images, bKbM4 has 400+
 	}
@@ -74,7 +74,6 @@ export class App {
 		for (var i = 0; i < arr.length; i++) {
 			this.imgArray.push(new Image(arr[i].link, arr[i].id));
 		}
-		console.log('this:', this.imgArray);
 	}
 
 	onClickArrow(direction) {
@@ -83,7 +82,6 @@ export class App {
 		var length = this.imgArray.length;
 		var numOfPages = Math.ceil(length / this.numPerPage);
 		var nextOffset = this.curOffset + direction * this.imgWidth * this.numPerPage * -1;
-		console.log(nextOffset);
 		this.ttlOffset = this.imgWidth * length;
 		if (direction === -1 && this.curOffset === 0) {
 			nextOffset = this.ttlOffset * -1 + this.imgWidth * (length % this.numPerPage);

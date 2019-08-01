@@ -5,17 +5,17 @@
 .template {
 	width: 100%;
 	margin: auto;
-	min-width: 400px;
+	min-width: 250px;
 }
 .root {
-	width: calc(320px * 4 + 82px);
+	width: calc(220px * 4 + 82px);
 	position: relative;
-	min-width: 400px;
+	min-width: 250px;
 	margin: auto;
 	height: 402px
 }
 .window {
-	width: calc(320px * 4);
+	width: calc(220px * 4);
 	overflow: hidden;
 	position: relative;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -26,28 +26,28 @@
 	/*display: flex;*/
 	transform: translate(0px);
 	transition: transform 1s ease-in-out;
-	/*width: calc(320px * 11);*/
+	/*width: calc(270px * 11);*/
 	position: relative;
 	opacity: 1;
 	height: 402px
 }
 .imgCard {
 	padding: 50px 10px;
-	width: 320px;
+	width: 220px;
 	height: 400px;
 	/*margin: 10px;*/
 	display: block;
 	float: left;
 }
 .imgCardItem {
-	width: 300px;
+	width: 200px;
 	height: 300px;
 	border: 1px solid rgba(0, 0, 0, 0.5);
 	/*margin: 10px;*/
 	display: block;
 }
 .imgCardItemImage {
-	width: 298px;
+	width: 198px;
     height: 200px;
     object-fit: cover;
     max-width: 100%;
@@ -55,7 +55,7 @@
     background-size:cover;
 }
 .imgCardItemDiv{
-  width: 298px;
+  width: 198px;
   height: 200px;
   background-size: cover;
   background-position: center;
@@ -63,7 +63,8 @@
 }
 .imgCardItemText {
 	text-align: center;
-	padding: 35px 5px;
+	padding: 15px 5px;
+	word-wrap: break-word;
 }
 .prevArrow, .nextArrow {
   cursor: pointer;
@@ -101,25 +102,25 @@
 }
 @media only screen and (max-width: 1600px) {
 	.root {
-		width: calc(320px * 3 + 82px);
+		width: calc(220px * 3 + 82px);
 	}
 	.window {
-		width: calc(320px * 3);
+		width: calc(220px * 3);
 	}
 }
 @media only screen and (max-width: 1200px) {
 	.root {
-		width: calc(320px * 2 + 82px);
+		width: calc(220px * 2 + 82px);
 	}
 	.window {
-		width: calc(320px * 2);
+		width: calc(220px * 2);
 	}
 }
 @media only screen and (max-width: 800px) {
 	.root {
-		width: calc(320px * 1 + 82px);
+		width: calc(220px * 1 + 82px);
 	}
 	.window {
-		width: calc(320px * 1);
+		width: calc(220px * 1);
 	}
 }
